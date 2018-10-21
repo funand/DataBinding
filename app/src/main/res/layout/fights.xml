@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:bind="http://schemas.android.com/tools">
+    <!--Step 1-->
+    <data>
+
+        <!--Step 2-->
+        <variable
+            name="ufc"
+            type="com.example.prince.databindingass.UFC" />
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ufc_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            bind:imageUrl="@{ufc.thumbnail}"/>
+
+        <TextView
+            android:id="@+id/ufc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ufc_img"
+            android:text="@{ufc.title}"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/ufc_decription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ufc_title"
+            android:layout_toRightOf="@+id/ufc_img"
+            android:text="@{ufc.author}"/>
+
+    </RelativeLayout>
+
+</layout>
+
+
+
