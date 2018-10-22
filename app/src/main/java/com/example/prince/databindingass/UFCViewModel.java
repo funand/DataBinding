@@ -1,8 +1,5 @@
 package com.example.prince.databindingass;
 
-import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import java.util.List;
 import retrofit2.Call;
@@ -41,7 +38,6 @@ public class UFCViewModel{
 
             }
         });
-
     }
 
 }
